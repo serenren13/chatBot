@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
+const baseURL = import.meta.env.VITE_BASE_URL || 'http://localhost:5001';
+
 type Message = {
   role: "user" | "assistant";
   content: string;
@@ -20,7 +22,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5001/chat", {
+      const response = await axios.post(`${baseURL}/chat`, {
         message: currentInput,
       });
       const assistantMessage: Message = { role: "assistant", content: response.data.message };
