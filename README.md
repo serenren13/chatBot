@@ -2,8 +2,11 @@
 
 A full-stack ChatGPT clone built with React, TypeScript, and Express.js.
 
+🔗 **Live Demo:** [chboat.netlify.app](https://chboat.netlify.app)
+
 ## Table of Contents
 - [Description](#description)
+- [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [How to Use](#how-to-use)
 - [Major Components](#major-components)
@@ -12,6 +15,12 @@ A full-stack ChatGPT clone built with React, TypeScript, and Express.js.
 ## Description
 
 A conversational AI web app that uses OpenAI's GPT-3.5-turbo model to hold multi-turn conversations. The backend maintains conversation history so the AI has context across messages, mimicking the experience of ChatGPT.
+
+## Tech Stack
+- **Frontend:** React, TypeScript, Vite
+- **Backend:** Node.js, Express.js, TypeScript
+- **AI:** OpenAI GPT-3.5-turbo API
+- **Deployment:** Netlify (frontend), Render (backend)
 
 ## Installation
 
@@ -32,6 +41,11 @@ OPENAI_API_KEY=your_key_here
 ```bash
 cd frontend
 npm install
+```
+
+Create a `.env` file in the `frontend` folder:
+```
+VITE_BASE_URL=http://localhost:5001
 ```
 
 ## How to Use
